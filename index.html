@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 231 Course Home Page – Bruce Nyeha">
+  <meta name="author" content="Bruce Nyeha">
+  <title>WDD 231 | Bruce Nyeha</title>
+
+  <!-- Normalize first -->
+  <link rel="stylesheet" href="week01/styles/normalize.css">
+  <!-- Small screen styles -->
+  <link rel="stylesheet" href="week01/styles/small.css">
+  <!-- Large screen styles (media query inside) -->
+  <link rel="stylesheet" href="week01/styles/large.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="week01/images/sollichtrise-logo.JPG" alt="SolLichtRise Tech Logo" class="logo">
+    <h1>Bruce Nyeha</h1>
+    <button id="menuBtn">☰ Menu</button>
+  </header>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <!-- Course Cards Section -->
+    <section id="courses">
+      <h2>Web & Computer Programming Certificate Courses</h2>
+      <div class="filter-buttons">
+        <button data-filter="all">All</button>
+        <button data-filter="WDD">WDD</button>
+        <button data-filter="CSE">CSE</button>
+      </div>
+      <div id="courseList" class="course-grid"></div>
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Bruce Nyeha · Ghana</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="week01/scripts/main.js" defer></script>
+  <script src="week01/scripts/courses.js" defer></script>
+  <script src="scripts/menu.js" defer></script>
+</body>
+</html>
