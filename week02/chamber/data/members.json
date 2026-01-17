@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Accra Fashion Hub",
+    "address": "Osu Oxford Street, Accra",
+    "phone": "+233 24 123 4567",
+    "website": "https://accrafashion.com",
+    "images": "fashion.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Tema Logistics Ltd",
+    "address": "Tema Harbour Area, Accra",
+    "phone": "+233 30 212 3456",
+    "website": "https://temalogistics.com",
+    "images": "logistics.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Kumasi Tech Solutions",
+    "address": "Spintex Road, Accra",
+    "phone": "+233 54 987 6543",
+    "website": "https://kumasi-tech.com",
+    "images": "tech.jpg",
+    "membership": "Member"
+  },
+  {
+    "name": "Ghana Foods Processing",
+    "address": "Ring Road Central, Accra",
+    "phone": "+233 27 555 1234",
+    "website": "https://ghanafoods.com",
+    "images": "food.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Accra Construction Group",
+    "address": "Airport Residential Area, Accra",
+    "phone": "+233 30 277 8899",
+    "website": "https://accraconstruction.com",
+    "images"
+    : "construction.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "West Africa Marketing Agency",
+    "address": "Cantonments, Accra",
+    "phone": "+233 20 456 7890",
+    "website": "https://wamagency.com",
+    "images": "marketing.jpg",
+    "membership": "Member"
+  },
+  {
+    "name": "Premier Hotels Accra",
+    "address": "Labone, Accra",
+    "phone": "+233 30 278 9900",
+    "website": "https://premierhotelsgh.com",
+    "images": "hotel.jpg",
+    "membership": "Gold"
+  }
+]

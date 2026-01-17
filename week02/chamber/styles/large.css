@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+  #menuBtn {
+    display: none;
+  }
+
+  #navMenu {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav a {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .member-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
