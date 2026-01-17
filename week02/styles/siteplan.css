@@ -1,0 +1,49 @@
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #f8f9fa;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid #006B3F;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #006B3F;
+}
+
+h2 {
+  color: #006B3F;
+  margin-top: 2rem;
+  border-bottom: 2px solid #FCD116;
+  padding-bottom: 0.5rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+ul, ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+  color: #666;
+}
