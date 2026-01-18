@@ -1,3 +1,11 @@
+/* chamber/styles/small.css - Mobile-first */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -52,10 +60,16 @@ nav ul {
 
 nav a {
   display: block;
-  color: white;
+  color: #eee; /* Improved contrast on dark background */
   text-decoration: none;
   padding: 1rem;
   text-align: center;
+}
+
+nav a.active {
+  background: #FCD116;
+  color: #006B3F;
+  font-weight: bold;
 }
 
 main {
@@ -81,7 +95,7 @@ main {
 
 .view-toggle button.active {
   background: #FCD116;
-  color: #006B3F;
+  color: #000; /* Black text for contrast */
 }
 
 .member-grid {
@@ -105,6 +119,10 @@ main {
   border-radius: 8px;
 }
 
+.list-view .member-card img {
+  display: none; /* Hide images in list view */
+}
+
 .member-card h3 {
   color: #006B3F;
   margin: 1rem 0 0.5rem;
@@ -121,23 +139,4 @@ footer {
   text-align: center;
   padding: 2rem;
   margin-top: 3rem;
-}
-
-
-.member-grid.list-view {
-  display: block;
-}
-
-.member-grid.list-view .member-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.member-grid.list-view .member-card img {
-  width: 120px;
-  height: 120px;
 }
