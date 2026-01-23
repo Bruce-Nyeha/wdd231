@@ -133,6 +133,121 @@ main {
   margin: 0.5rem 0;
 }
 
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* 60% of viewport height – adjust if needed */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills space without distortion */
+  object-position: center;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 107, 63, 0.6); /* Ghana green, 60% opacity – lighter feel */
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 85%; /* narrower on mobile – prevents covering whole image */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* depth + better contrast */
+}
+
+.hero-text h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  background: #FCD116;
+  color: #006B3F;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #e6b800;
+}
+
+/* Events, Weather, Spotlight */
+.events, .weather, .spotlight {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.spotlight-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.spotlight-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.spotlight-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+@media (min-width: 768px) {
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.7); /* darker overlay */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* shadow for better contrast */
+}
+
+.hero-text {
+  padding: 1.5rem;
+  max-width: 90%;
+}
+
+#navMenu {
+  display: none;           /* Hidden by default on small screens */
+  background: #212121;
+}
+
+#navMenu.show {
+  display: block;          /* Shown when .show is added */
+}
+
 footer {
   background: #212121;
   color: white;

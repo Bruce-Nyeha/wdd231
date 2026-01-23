@@ -3,60 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 231 Course Home Page – Bruce Nyeha">
+  <meta name="description" content="Welcome to Accra Metropolitan Chamber of Commerce – Connect, Grow, Succeed">
   <meta name="author" content="Bruce Nyeha">
-  <title>WDD 231 | Bruce Nyeha</title>
+  <title>Accra Chamber of Commerce | Home</title>
+<script src="week02/chamber/scripts/directory.js" defer></script>
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
 
-  <!-- Normalize first -->
-  <link rel="stylesheet" href="week01/styles/normalize.css">
-  <!-- Small screen styles -->
-  <link rel="stylesheet" href="week01/styles/small.css">
-  <!-- Large screen styles (media query inside) -->
-  <link rel="stylesheet" href="week01/styles/large.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Accra Chamber of Commerce – Home">
+  <meta property="og:description" content="Join the network of businesses in Accra for growth and opportunities.">
+  <meta property="og:image" content="https://bruce-nyeha.github.io/wdd231/images/commerce-accra.jpg">
+  <meta property="og:url" content="https://bruce-nyeha.github.io/wdd231/index.html">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="week02/chamber/styles/normalize.css">
+  <link rel="stylesheet" href="week02/chamber/styles/small.css">
+  <link rel="stylesheet" href="week02/chamber/styles/large.css">
 </head>
 <body>
   <header>
-    <img src="week01/images/sollichtrise-logo.JPG" alt="SolLichtRise Tech Logo" class="logo">
-    <h1>Bruce Nyeha</h1>
-    <button id="menuBtn">☰ Menu</button>
+    <img src="images/logo.jpg" alt="Accra Chamber of Commerce Logo" class="logo">
+    <h1>Accra Metropolitan Chamber of Commerce</h1>
+    <button id="menuBtn" aria-label="Toggle navigation menu">☰</button>
   </header>
 
   <nav id="navMenu">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Chamber</a></li>
-      <li><a href="#">Final Project</a></li>
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="#">Join</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1>Home</h1>
+    <!-- Hero Section -->
+   <section class="hero">
+  <img src="images/hero.jpg" alt="Business professionals networking in Accra – Join the Chamber today" loading="lazy">
+  <div class="hero-text">
+    <h2>Welcome to Accra's Business Community</h2>
+    <p>Connect, collaborate, and grow with the leading business network in Ghana.</p>
+    <a href="#" class="cta-button">Join the Chamber Today</a>
+  </div>
+</section>
 
-    <!-- Course Cards Section -->
-    <section id="courses">
-      <h2>Web & Computer Programming Certificate Courses</h2>
-      <div class="filter-buttons">
-        <button data-filter="all">All</button>
-        <button data-filter="WDD">WDD</button>
-        <button data-filter="CSE">CSE</button>
-      </div>
-      <div id="courseList" class="course-grid"></div>
-      <p>Total Credits: <span id="totalCredits">0</span></p>
+    <!-- Events Section -->
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <p>Stay tuned for networking workshops and business seminars in Accra.</p>
+
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Current Weather in Accra</h2>
+      <p id="current-temp"></p>
+      <figure>
+        <img id="weather-icon" src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section class="spotlight">
+      <h2>Member Spotlight</h2>
+      <div id="spotlight-container" class="spotlight-grid"></div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Bruce Nyeha · Ghana</p>
+    <p>© <span id="year"></span> Bruce Nyeha · Accra, Ghana</p>
     <p>Last Modified: <span id="lastModified"></span></p>
+    <p>WDD 231 – Web Frontend Development I</p>
   </footer>
 
-  <script src="week01/scripts/main.js" defer></script>
-  <script src="week01/scripts/courses.js" defer></script>
-  <script src="scripts/menu.js" defer></script>
+  <script>
+  // Hamburger menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const navMenu = document.getElementById('navMenu');
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  }
+</script>
+
+  <script src="week02/chamber/scripts/weather.js" defer></script>
+  <script src="week02/chamber/scripts/spotlight.js" defer></script>
+  
 </body>
 </html>
