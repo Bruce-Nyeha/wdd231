@@ -1,3 +1,5 @@
+/* Mobile-first styles - small.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,6 @@ body {
   color: #333;
   background: #f8f9fa;
 }
-
 
 header {
   background: #006B3F;
@@ -45,14 +46,9 @@ h1 {
 }
 
 #navMenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
+  display: block;
   background: #212121;
-  z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  width: 100%;
 }
 
 #navMenu.show {
@@ -67,11 +63,16 @@ h1 {
 
 #navMenu a {
   display: block;
-  color: #eee;
+  color: #f8f9fa;
   text-decoration: none;
   padding: 1rem 2rem;
   text-align: center;
   border-bottom: 1px solid #444;
+  transition: background-color 0.3s ease;
+}
+
+#navMenu a:hover {
+  background: #333;
 }
 
 #navMenu a:last-child {
@@ -91,10 +92,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Zalando Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  
 }
 
 .hero {
@@ -194,10 +191,16 @@ main {
   border-radius: 8px;
 }
 
+footer {
+  background: #212121;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+}
 
-/* Add these styles to your existing small.css */
-
-/* Directory Page - View Toggle */
+/* Directory Page Styles */
 .view-toggle {
   display: flex;
   gap: 0.5rem;
@@ -231,7 +234,6 @@ main {
   border-color: #FCD116;
 }
 
-/* Member Grid View */
 .member-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -294,7 +296,6 @@ main {
   box-shadow: 0 5px 12px rgba(252, 209, 22, 0.4);
 }
 
-/* List View */
 .list-view {
   display: flex;
   flex-direction: column;
@@ -331,13 +332,4 @@ main {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
-}
-
-footer {
-  background: #212121;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 3rem;
-  width: 100%;
 }
