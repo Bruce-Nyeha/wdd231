@@ -1,5 +1,3 @@
-/* chamber/styles/small.css - Mobile-first */
-
 * {
   margin: 0;
   padding: 0;
@@ -47,23 +45,36 @@ h1 {
 
 #navMenu {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
   background: #212121;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 #navMenu.show {
   display: block;
 }
 
-nav ul {
+#navMenu ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-nav a {
+#navMenu a {
   display: block;
-  color: #eee; /* Improved contrast on dark background */
+  color: #eee;
   text-decoration: none;
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+#navMenu a:last-child {
+  border-bottom: none;
 }
 
 nav a.active {
@@ -73,78 +84,26 @@ nav a.active {
 }
 
 main {
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.view-toggle {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.view-toggle button {
-  padding: 0.8rem 1.5rem;
-  margin: 0.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #006B3F;
-  color: white;
-}
-
-.view-toggle button.active {
-  background: #FCD116;
-  color: #000; /* Black text for contrast */
-}
-
-.member-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.member-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.member-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.list-view .member-card img {
-  display: none; /* Hide images in list view */
-}
-
-.member-card h3 {
-  color: #006B3F;
-  margin: 1rem 0 0.5rem;
-}
-
-.member-card p {
-  color: #555;
-  margin: 0.5rem 0;
-}
-
-/* Hero */
 .hero {
   position: relative;
   width: 100%;
-  height: 60vh; /* 60% of viewport height – adjust if needed */
+  height: 60vh;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Fills space without distortion */
+  object-fit: cover;
   object-position: center;
   display: block;
 }
@@ -154,43 +113,56 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 107, 63, 0.6); /* Ghana green, 60% opacity – lighter feel */
+  background: rgba(0, 107, 63, 0.68);
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 1.6rem 1.8rem;
   border-radius: 16px;
   text-align: center;
-  max-width: 85%; /* narrower on mobile – prevents covering whole image */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* depth + better contrast */
+  max-width: 90%;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  backdrop-filter: blur(5px);
 }
 
 .hero-text h2 {
-  margin: 0 0 0.8rem;
-  font-size: 1.8rem;
+  margin: 0 0 0.9rem 0;
+  font-size: clamp(1.6rem, 5.5vw, 2.2rem);
   line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 }
 
 .hero-text p {
-  margin: 0 0 1rem;
-  font-size: 1.1rem;
+  margin: 0 0 1.3rem 0;
+  font-size: clamp(1rem, 4.2vw, 1.15rem);
+  line-height: 1.45;
+  opacity: 0.95;
 }
 
 .cta-button {
   background: #FCD116;
   color: #006B3F;
-  padding: 0.8rem 1.8rem;
-  border-radius: 8px;
+  padding: 0.9rem 2.1rem;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 4vw, 1.1rem);
   display: inline-block;
-  transition: background 0.3s;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 14px rgba(252, 209, 22, 0.45);
 }
 
 .cta-button:hover {
-  background: #e6b800;
+  background: #f0c000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(252, 209, 22, 0.55);
 }
 
-/* Events, Weather, Spotlight */
 .events, .weather, .spotlight {
+  width: 100%;
+  max-width: 900px;
   margin: 2rem 0;
   padding: 1.5rem;
   background: white;
@@ -217,41 +189,11 @@ main {
   border-radius: 8px;
 }
 
-
-@media (min-width: 768px) {
-  .hero-text {
-    max-width: 50%;
-  }
-
-  .spotlight-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
-
-.hero-text {
-  background: rgba(0, 0, 0, 0.7); /* darker overlay */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* shadow for better contrast */
-}
-
-.hero-text {
-  padding: 1.5rem;
-  max-width: 90%;
-}
-
-#navMenu {
-  display: none;           /* Hidden by default on small screens */
-  background: #212121;
-}
-
-#navMenu.show {
-  display: block;          /* Shown when .show is added */
-}
-
 footer {
   background: #212121;
   color: white;
   text-align: center;
   padding: 2rem;
   margin-top: 3rem;
+  width: 100%;
 }

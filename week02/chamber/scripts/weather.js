@@ -1,4 +1,3 @@
-
 const lat = 5.60;
 const lon = -0.19;
 const apiKey = '77f642ab9fa479ec7bb8cecd2b09280c';
@@ -19,14 +18,15 @@ async function apiFetch() {
     }
   } catch (error) {
     console.log(error);
-    captionDesc.textContent = 'Weather data unavailable';
+    captionDesc.textContent = 'Weather unavailable';
   }
 }
 
 function displayResults(data) {
   currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;F`;
-  const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-  const desc = data.weather[0].description;
+  const iconCode = data.weather?.[0]?.icon || '01d';
+  const iconsrc = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  const desc = data.weather?.[0]?.description || 'No description';
 
   weatherIcon.setAttribute('src', iconsrc);
   weatherIcon.setAttribute('alt', desc);
