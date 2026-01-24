@@ -59,3 +59,72 @@
     max-width: 1000px;
   }
 }
+
+
+/* Add these styles to your existing large.css */
+
+@media (min-width: 768px) {
+  /* Directory Page Enhancements */
+  
+  /* View Toggle */
+  .view-toggle {
+    max-width: 350px;
+  }
+
+  .view-toggle button {
+    font-size: 1.05rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* Member Grid - 2 columns on tablets */
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .member-card img {
+    height: 220px;
+  }
+
+  /* List View - Better layout for larger screens */
+  .list-view .member-card {
+    grid-template-columns: 150px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .list-view .member-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .list-view .member-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .list-view .member-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra large screens - 3 column grid */
+@media (min-width: 1024px) {
+  .member-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .member-card img {
+    height: 240px;
+  }
+
+  .list-view .member-card {
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+  }
+
+  .list-view .member-card img {
+    width: 180px;
+    height: 180px;
+  }
+}

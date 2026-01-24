@@ -11,6 +11,7 @@ body {
   background: #f8f9fa;
 }
 
+
 header {
   background: #006B3F;
   color: white;
@@ -90,6 +91,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Zalando Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  
 }
 
 .hero {
@@ -187,6 +192,145 @@ main {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+
+/* Add these styles to your existing small.css */
+
+/* Directory Page - View Toggle */
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.view-toggle button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 2px solid #006B3F;
+  color: #006B3F;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-toggle button.active {
+  background-color: #006B3F;
+  color: white;
+  border-color: #006B3F;
+}
+
+.view-toggle button:hover {
+  background-color: #FCD116;
+  color: #006B3F;
+  border-color: #FCD116;
+}
+
+/* Member Grid View */
+.member-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.member-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+}
+
+.member-card h3 {
+  color: #006B3F;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.member-card p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.member-card a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #FCD116;
+  color: #006B3F;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(252, 209, 22, 0.3);
+}
+
+.member-card a:hover {
+  background-color: #f0c000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(252, 209, 22, 0.4);
+}
+
+/* List View */
+.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-view .member-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: start;
+}
+
+.list-view .member-card img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  grid-row: 1 / -1;
+}
+
+.list-view .member-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.list-view .member-card p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.list-view .member-card a {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 
 footer {

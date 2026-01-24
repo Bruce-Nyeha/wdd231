@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadMembers() {
     try {
-      const response = await fetch('week02/chamber/data/members.json');
+      const response = await fetch('data/members.json');
       if (!response.ok) throw new Error('Failed to load members');
       const members = await response.json();
       displayMembers(members);
