@@ -125,4 +125,26 @@
     width: 180px;
     height: 180px;
   }
+
+  /* Form enhancements for larger screens */
+  form {
+    padding: 2.5rem;
+  }
+
+  fieldset {
+    padding: 2rem;
+  }
+
+  /* Membership cards - 2 columns on tablet */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Extra large - 4 column membership cards */
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

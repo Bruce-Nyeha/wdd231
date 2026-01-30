@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to join the Accra Metropolitan Chamber of Commerce and unlock exclusive business networking opportunities.">
+  <meta name="author" content="Bruce Nyeha">
+  <title>Accra Chamber of Commerce | Join</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Join Accra Chamber of Commerce">
+  <meta property="og:description" content="Apply for membership and grow your business with Accra's leading chamber of commerce.">
+  <meta property="og:image" content="https://bruce-nyeha.github.io/wdd231/chamber/images/logo.jpg">
+  <meta property="og:url" content="https://bruce-nyeha.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="Accra Chamber of Commerce Logo" class="logo">
+    <h1>Accra Metropolitan Chamber of Commerce</h1>
+    <button id="menuBtn" aria-label="Toggle navigation menu">☰</button>
+  </header>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Join the Chamber</h1>
+
+    <form id="joinForm" method="get" action="thankyou.html">
+      <fieldset>
+        <legend>Personal Information</legend>
+        
+        <label for="firstName">
+          First Name <span class="required">*</span>
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="Please enter your first name">
+        </label>
+
+        <label for="lastName">
+          Last Name <span class="required">*</span>
+          <input type="text" id="lastName" name="lastName" required autocomplete="family-name" title="Please enter your last name">
+        </label>
+
+        <label for="title">
+          Organizational Title
+          <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z \-]{7,}" title="Minimum 7 characters: letters, hyphens, and spaces only">
+        </label>
+
+        <label for="email">
+          Email <span class="required">*</span>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@company.com" title="Please enter a valid email address">
+        </label>
+
+        <label for="phone">
+          Mobile Phone <span class="required">*</span>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Please enter your mobile phone number">
+        </label>
+
+        <label for="orgName">
+          Business/Organization Name <span class="required">*</span>
+          <input type="text" id="orgName" name="orgName" required autocomplete="organization" title="Please enter your business or organization name">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Membership Level <span class="required">*</span></legend>
+        
+        <label for="membership">
+          Select Membership Level
+          <select id="membership" name="membership" required title="Please select a membership level">
+            <option value="">Choose one</option>
+            <option value="np">NP Membership (No Fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        
+        <label for="description">
+          Business/Organization Description
+          <textarea id="description" name="description" rows="5" title="Describe your business or organization"></textarea>
+        </label>
+      </fieldset>
+
+      <input type="hidden" id="timestamp" name="timestamp">
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <section class="membership-cards">
+      <h2>Membership Benefits</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>NP Membership</h3>
+          <p>Free for non-profits</p>
+          <a href="#npModal" class="modal-link">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Bronze Membership</h3>
+          <p>Essential benefits</p>
+          <a href="#bronzeModal" class="modal-link">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Silver Membership</h3>
+          <p>Enhanced benefits</p>
+          <a href="#silverModal" class="modal-link">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Gold Membership</h3>
+          <p>Premium benefits</p>
+          <a href="#goldModal" class="modal-link">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <dialog id="npModal">
+      <h2>NP Membership</h2>
+      <p><strong>For Non-Profit Organizations - No Fee</strong></p>
+      <ul>
+        <li>Directory listing</li>
+        <li>Networking events access</li>
+        <li>Monthly newsletter</li>
+        <li>Community recognition</li>
+      </ul>
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+    <dialog id="bronzeModal">
+      <h2>Bronze Membership</h2>
+      <p><strong>Essential Benefits Package</strong></p>
+      <ul>
+        <li>Directory listing with logo</li>
+        <li>Event discounts (10%)</li>
+        <li>Monthly newsletter</li>
+        <li>Business resources access</li>
+        <li>Networking events</li>
+      </ul>
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+    <dialog id="silverModal">
+      <h2>Silver Membership</h2>
+      <p><strong>Enhanced Benefits Package</strong></p>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Home page spotlight (monthly rotation)</li>
+        <li>Event discounts (20%)</li>
+        <li>Training workshops access</li>
+        <li>Priority event registration</li>
+        <li>Social media features</li>
+      </ul>
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+    <dialog id="goldModal">
+      <h2>Gold Membership</h2>
+      <p><strong>Premium Benefits Package</strong></p>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Top home page spotlight position</li>
+        <li>Event discounts (30%)</li>
+        <li>Exclusive networking events</li>
+        <li>Featured advertising opportunities</li>
+        <li>Business consulting sessions</li>
+        <li>VIP event seating</li>
+      </ul>
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Bruce Nyeha · Accra, Ghana</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>WDD 231 - Web Frontend Development I</p>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</body>
+</html>
