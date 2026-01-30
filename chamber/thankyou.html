@@ -3,8 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Thank you for applying to join the Accra Metropolitan Chamber of Commerce! 
+ Your application has been received. We will review it soon and contact you with next steps to unlock exclusive business networking, events, and growth opportunities in Ghana.">
+   <meta name="author" content="Bruce Nyeha">
   <title>Thank You | Accra Chamber of Commerce</title>
-  <meta name="description" content="Thank you for applying to join the Accra Metropolitan Chamber of Commerce.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thank You - Join Accra Chamber of Commerce">
+  <meta property="og:description" content="Your application has been received. We will review it soon.">
+  <meta property="og:image" content="https://bruce-nyeha.github.io/wdd231/chamber/images/logo.jpg">
+  <meta property="og:url" content="https://bruce-nyeha.github.io/wdd231/chamber/thankyou.html">
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
@@ -13,11 +32,20 @@
   <header>
     <img src="images/logo.jpg" alt="Accra Chamber of Commerce Logo" class="logo">
     <h1>Accra Metropolitan Chamber of Commerce</h1>
+    <button id="menuBtn" aria-label="Toggle navigation menu">☰</button>
   </header>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
 
   <main>
     <h1>Thank You for Applying!</h1>
-    <p>We have received your application. Here's what you submitted:</p>
+    <p>We have received your membership application. Here's what you submitted:</p>
 
     <dl>
       <dt>First Name</dt>
@@ -39,22 +67,16 @@
       <dd id="displayTimestamp"></dd>
     </dl>
 
-    <a href="index.html">Back to Home</a>
+    <a href="index.html" class="cta-button">Back to Home</a>
   </main>
 
   <footer>
     <p>© <span id="year"></span> Bruce Nyeha · Accra, Ghana</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>WDD 231 – Web Frontend Development I</p>
   </footer>
 
   <script src="scripts/main.js" defer></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    document.getElementById('displayFirst').textContent = urlParams.get('firstName') || 'N/A';
-    document.getElementById('displayLast').textContent = urlParams.get('lastName') || 'N/A';
-    document.getElementById('displayEmail').textContent = urlParams.get('email') || 'N/A';
-    document.getElementById('displayPhone').textContent = urlParams.get('phone') || 'N/A';
-    document.getElementById('displayOrg').textContent = urlParams.get('orgName') || 'N/A';
-    document.getElementById('displayTimestamp').textContent = urlParams.get('timestamp') || 'N/A';
-  </script>
+  <script src="scripts/thankyou.js" defer></script>
 </body>
 </html>
