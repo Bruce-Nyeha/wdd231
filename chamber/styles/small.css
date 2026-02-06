@@ -589,3 +589,71 @@ main a {
 main a:hover {
   background-color: #005030;
 }
+
+
+.discover-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.discover-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-card h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #006B3F;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.discover-card figcaption {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.discover-card p {
+  padding: 0 1rem 1rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.discover-card button {
+  background: #FCD116;
+  color: #006B3F;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.3s;
+}
+
+.discover-card button:hover {
+  background: #e6c200;
+}
+
+.visit-message {
+  background: #e8f5e9;
+  color: #006B3F;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}

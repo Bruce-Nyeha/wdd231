@@ -148,3 +148,26 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "a b c d"
+      "e f g h";
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "a b"
+      "c d"
+      "e f"
+      "g h";
+  }
+}
+
+/* Small is default stacked (grid-template-areas already set) */
