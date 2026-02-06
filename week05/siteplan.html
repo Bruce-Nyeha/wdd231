@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan – Accra Solar Gadget Guide</title>
+  <meta name="description" content="Site plan for the Accra Solar Gadget Guide website project.">
+  <meta name="author" content="Bruce Nyeha">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #006B3F;      /* Dark green – Ghana flag, trust, eco */
+      --secondary: #FCD116;    /* Yellow – energy, optimism */
+      --accent: #212121;       /* Dark gray – modern contrast */
+      --bg-light: #f8f9fa;     /* Light background */
+      --text: #333;            /* Main text */
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg-light);
+      margin: 0;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--primary);
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    
+    section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .color-box {
+      width: 120px;
+      height: 120px;
+      display: inline-block;
+      margin: 0.5rem;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 120px;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .wireframe {
+      background: #f0f0f0;
+      padding: 1rem;
+      border: 2px dashed var(--accent);
+      margin: 1rem 0;
+      text-align: center;
+      font-family: monospace;
+    }
+    
+    .mobile { max-width: 400px; margin: 0 auto; }
+    .desktop { max-width: 900px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Site Plan – Accra Solar Gadget Guide</h1>
+    <p>Individual Project – WDD 231 Web Frontend Development</p>
+  </header>
+
+  <section>
+    <h2>1. Site Name</h2>
+    <p><strong>Accra Solar Gadget Guide</strong></p>
+    <p><strong>Reason:</strong> The name clearly communicates the focus: solar-powered gadgets relevant to people in Accra and Ghana facing power challenges. It is specific, memorable, searchable, and positions the site as a helpful resource rather than a sales-only shop.</p>
+    <p>Optional domain: accrasolarguide.com (available as of 2026 check)</p>
+  </section>
+
+  <section>
+    <h2>2. Site Purpose</h2>
+    <p>The site serves as a helpful guide for people in Ghana (especially Accra) interested in solar gadgets to save on electricity costs, reduce reliance on the grid, and live more sustainably. It provides:</p>
+    <ul>
+      <li>Information about popular solar products (chargers, lights, fans, batteries)</li>
+      <li>Price comparisons and key features</li>
+      <li>Buying tips and recommendations</li>
+      <li>A contact/quote form for personalized advice</li>
+    </ul>
+    <p>Overall goal: Educate users, build trust, and drive inquiries for purchases or consultations.</p>
+  </section>
+
+  <section>
+    <h2>3. Scenarios</h2>
+    <p>These represent typical questions from the target audience (small business owners, households, young professionals in Ghana):</p>
+    <ul>
+      <li>What is the best affordable solar charger for my phone and small devices during load shedding?</li>
+      <li>Which solar fan gives the most power for the price under GH₵500?</li>
+      <li>How do I know if a solar battery is good quality and worth the investment?</li>
+      <li>Can I get help choosing the right solar setup for my small shop in Accra?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Color Scheme</h2>
+    <p>The palette reflects energy, trust, sustainability, and Ghanaian identity:</p>
+    
+    <div class="color-box" style="background: var(--primary); color: white;">Primary<br>#006B3F<br>(Headings, buttons, accents)</div>
+    <div class="color-box" style="background: var(--secondary); color: #000;">Secondary<br>#FCD116<br>(Highlights, CTAs, energy feel)</div>
+    <div class="color-box" style="background: var(--accent); color: white;">Dark Text<br>#212121<br>(Body text, footers)</div>
+    <div class="color-box" style="background: var(--bg-light); color: #333;">Light BG<br>#f8f9fa<br>(Page background)</div>
+  </section>
+
+  <section>
+    <h2>5. Typography</h2>
+    <p>Two fonts for clean, modern look:</p>
+    <ul>
+      <li><strong>Headings:</strong> Orbitron (Google Fonts) – bold, futuristic, tech-energy vibe<br>Usage: H1–H3, main titles</li>
+      <li><strong>Body & Paragraphs:</strong> Inter (Google Fonts) – highly readable, neutral, professional<br>Usage: All body text, descriptions, navigation</li>
+    </ul>
+    <p>Example:</p>
+    <h3 style="font-family: 'Orbitron', sans-serif;">This is a Heading</h3>
+    <p style="font-family: 'Inter', sans-serif;">This is body text – clean and easy to read on any device.</p>
+  </section>
+
+  <section>
+    <h2>6. Wireframe – Home Page</h2>
+    
+    <h3>Mobile View (320–480px)</h3>
+    <div class="wireframe mobile">
+      [Header: Logo + Title]<br>
+      [Hero: Solar gadget image + "Go Solar in Accra" headline + CTA button]<br>
+      <br>
+      [Featured Products: 1–2 cards stacked]<br>
+      [Why Solar? – Short text + icons]<br>
+      [Contact Form – Simple fields]<br>
+      [Footer: Copyright + links]
+    </div>
+
+    <h3>Desktop/Tablet View (768px+)</h3>
+    <div class="wireframe desktop">
+      [Header: Logo left | Nav right]<br>
+      [Hero: Full-width image + overlay text + big CTA button]<br>
+      <br>
+      [Featured Products: 3–4 cards in grid]<br>
+      [Why Solar? – 3-column icons/text]<br>
+      [Contact Form: Left column | Benefits/CTA right column]<br>
+      [Footer: Full-width]
+    </div>
+  </section>
+
+</body>
+</html>

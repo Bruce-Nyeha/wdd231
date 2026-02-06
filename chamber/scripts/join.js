@@ -1,25 +1,56 @@
+// join.js - Handle form submission and modals
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Timestamp hidden field
-  document.getElementById('timestamp').value = new Date().toISOString();
+  const form = document.getElementById('joinForm');
+  const timestampField = document.getElementById('timestamp');
 
-  // Card fade-in animation on load
-  const cards = document.querySelectorAll('.membership-cards .card');
-  cards.forEach((card, index) => {
-    card.style.opacity = 0;
-    card.style.transform = 'translateY(20px)';
-    setTimeout(() => {
-      card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-      card.style.opacity = 1;
-      card.style.transform = 'translateY(0)';
-    }, index * 200);
-  });
+  // Set timestamp when form is submitted
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      const now = new Date();
+      timestampField.value = now.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+    });
+  }
 
-  // Modal open/close
-  document.querySelectorAll('.modal-link').forEach(link => {
-    link.addEventListener('click', e => {
+  // Handle modal links
+  const modalLinks = document.querySelectorAll('.modal-link');
+  modalLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
       const modalId = link.getAttribute('href').substring(1);
-      document.getElementById(modalId).showModal();
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.showModal();
+      }
+    });
+  });
+
+  // Close modals when clicking close button
+  const closeButtons = document.querySelectorAll('.close-modal');
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modalId = button.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.close();
+      }
+    });
+  });
+
+  // Close modals when clicking backdrop
+  const modals = document.querySelectorAll('dialog');
+  modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.close();
+      }
     });
   });
 });
