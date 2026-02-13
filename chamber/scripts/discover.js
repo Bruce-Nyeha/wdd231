@@ -26,7 +26,9 @@ discoverItems.forEach(item => {
   card.innerHTML = `
     <h2>${item.name}</h2>
     <figure>
-      <img src="${item.image}" alt="${item.name}" loading="lazy" width="300" height="200">
+      <img src="${item.image}" alt="${item.name}" loading="lazy" width="300" height="200"
+      srcset="${item.image} 300w, ${item.image.replace('300w', '600w')} 600w" 
+  sizes="(max-width: 600px) 100vw, 300px>
       <figcaption>${item.address}</figcaption>
     </figure>
     <p>${item.description}</p>
