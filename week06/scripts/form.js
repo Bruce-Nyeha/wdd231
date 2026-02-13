@@ -1,4 +1,3 @@
-
 export function setupForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;

@@ -1,4 +1,3 @@
-
 const modal = document.getElementById('product-modal');
 const closeBtn = document.getElementById('close-modal');
 const titleEl = document.getElementById('modal-title');

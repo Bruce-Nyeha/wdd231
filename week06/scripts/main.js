@@ -1,4 +1,3 @@
-
 import { initNavigationAndDarkMode } from './nav.js';
 import { loadProducts, setupProductEvents } from './products.js';
 import { setupModal } from './modal.js';
