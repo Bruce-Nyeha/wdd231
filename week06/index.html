@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your guide to affordable solar gadgets in Accra, Ghana – solar chargers, fans, lights, and batteries to beat load shedding and save on electricity costs.">
+  <meta name="author" content="Bruce">
+  <meta property="og:title" content="Accra Solar Gadget Guide – Home">
+  <meta property="og:description" content="Discover solar solutions for Ghana's power challenges.">
+  <meta property="og:image" content="images/hero-solar.jpg">
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/week06/">
+  <meta property="og:type" content="website">
+  <title>Accra Solar Gadget Guide - Home</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Accra Solar Gadget Guide</h1>
+      <button id="hamburger" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav" aria-hidden="true">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="tips.html">Tips & Advice</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Go Solar in Accra – Reliable Power, No More Dumsor Worries</h2>
+      <p>Explore affordable solar chargers, fans, lights, and batteries perfect for Ghana's hot climate and frequent outages.</p>
+      <img src="images/hero-solar.avif" alt="Solar gadgets in use during Accra evening" loading="lazy" width="800" height="400">
+      <a href="products.html" class="btn">Browse Products</a>
+    </section>
+
+    <section>
+      <h3>Why Choose Solar in Ghana?</h3>
+      <ul>
+        <li>Save on ECG bills – solar is free after initial cost.</li>
+        <li>Backup during load shedding or high tariffs.</li>
+        <li>Eco-friendly and sustainable for our future.</li>
+        <li>Portable options for homes, shops, and outdoor use in Accra.</li>
+      </ul>
+    </section>
+
+    <section class="weather-widget">
+  <h3>Current Weather in Accra</h3>
+  <p id="weather-loading">Loading local weather...</p>
+  <div id="weather-info" style="display: none;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+    <img id="weather-icon" src="" alt="Weather icon" width="80" height="80" loading="lazy">
+    <div>
+      <p id="temp" style="font-size: 1.4rem; font-weight: bold;"></p>
+      <p id="condition"></p>
+      <p id="humidity"></p>
+    </div>
+  </div>
+  <p style="margin-top: 1rem; font-style: italic;">Why solar? Accra gets plenty of sunshine!</p>
+</div>
+    
+    <img id="weather-icon" src="" alt="Current weather in Accra">
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Bruce - Accra Solar Gadget Guide</p>
+      <p><a href="https://youtu.be/KiFSHR95XjE" target="_blank">Project Demo Video</a></p>
+      <button id="dark-mode-toggle">Dark Mode</button>
+    </div>
+  </footer>
+
+  <dialog id="product-modal">
+    <div class="modal-content">
+      <button id="close-modal" aria-label="Close modal">×</button>
+      <h2 id="modal-title"></h2>
+      <img id="modal-image" alt="" loading="lazy">
+      <p id="modal-description"></p>
+      <p><strong>Price:</strong> GH₵<span id="modal-price"></span></p>
+      <p id="modal-features"></p>
+    </div>
+  </dialog>
+
+  <script type="module" src="scripts/main.js" defer></script>
+  <script type="module" src="scripts/weather.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* large.css - Larger screens (≥768px) */
+
+@media (min-width: 768px) {
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.4rem; }
+
+  header .container {
+    padding: 0 2rem;
+  }
+
+  #main-nav {
+    position: static;
+    display: block !important;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.2);
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    text-align: left;
+    padding: 4rem 0;
+  }
+
+  .hero img {
+    max-width: 50%;
+  }
+
+  #products-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 3rem auto;
+  }
+
+  button[type="submit"] {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero img {
+    max-width: 45%;
+  }
+}

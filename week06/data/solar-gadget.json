@@ -1,0 +1,20 @@
+[
+  {"id":1,"name":"16-Inch Solar Standing Fan with Remote","category":"fan","price":880,"features":"9 speeds, LED lights, USB charging, 8h runtime","image":"images/solar-fan.jpg","rating":4.7,"description":"Strong airflow for Accra heat during outages."},
+  {"id":2,"name":"20000mAh Solar Power Bank Waterproof","category":"charger","price":480,"features":"Dual USB, solar panel, flashlight","image":"images/power-bank.jpg","rating":4.5,"description":"Portable phone charging on the go."},
+  {"id":3,"name":"Solar Lantern 4 Brightness Levels","category":"light","price":320,"features":"Portable, hook, phone charge port","image":"images/solar-lantern.jpg","rating":4.6,"description":"Bright backup lighting for homes."},
+  {"id":4,"name":"Rechargeable Solar Table Fan 12-Inch","category":"fan","price":650,"features":"3 speeds, timer, Bluetooth","image":"images/solar-fan12inch.webp","rating":4.4,"description":"Compact for small rooms or shops."},
+  {"id":5,"name":"100Ah Gel Solar Battery 12V","category":"battery","price":1990,"features":"Deep cycle, maintenance-free","image":"images/solar-battery.jpg","rating":4.8,"description":"Reliable for small solar systems."},
+  {"id":6,"name":"Foldable 30W Portable Solar Charger","category":"charger","price":780,"features":"USB-C PD, multiple ports","image":"images/foldable-solar-chager.jpg","rating":4.3,"description":"Efficient for outdoor or shop use."},
+  {"id":7,"name":"Solar LED Bulb Kit 3 Bulbs","category":"light","price":450,"features":"Motion sensor, 8h+ runtime","image":"images/solar-bulb.jpg","rating":4.5,"description":"Easy home lighting solution."},
+  {"id":8,"name":"Solar Rechargeable Fan 18-Inch","category":"fan","price":1200,"features":"Remote, solar panel included","image":"images/rechargeable-solar-fan.jpeg","rating":4.6,"description":"Larger model for bigger spaces."},
+  {"id":9,"name":"15000mAh Solar Power Bank Fast Charge","category":"charger","price":420,"features":"PD 18W, LED display","image":"images/solar-powerbank.jpg","rating":4.4,"description":"Quick charge during blackouts."},
+  {"id":10,"name":"Solar Wall Light with Sensor","category":"light","price":280,"features":"Waterproof, motion detection","image":"images/solar-wall-light.webp","rating":4.2,"description":"Security lighting for compounds."},
+  {"id":11,"name":"200Ah Lithium Solar Battery","category":"battery","price":3200,"features":"Long cycle life, BMS protected","image":"images/lithium-solar-battery.webp","rating":4.9,"description":"Premium for larger setups."},
+  {"id":12,"name":"Multi-Function Solar Fan + Light","category":"fan","price":950,"features":"Mosquito repellent, phone charge","image":"images/multi-function-fan.avif","rating":4.5,"description":"Versatile for home use."},
+  {"id":13,"name":"Solar Camping Lantern Radio","category":"light","price":380,"features":"Bluetooth, FM radio","image":"images/radio-lantern.avif","rating":4.3,"description":"Entertainment + light combo."},
+  {"id":14,"name":"Solar Power Bank 30000mAh","category":"charger","price":650,"features":"High capacity, torch","image":"images/solar-powerbank-30000.jpg","rating":4.6,"description":"For extended outages."},
+  {"id":15,"name":"Rechargeable Solar Desk Fan","category":"fan","price":550,"features":"USB powered, quiet","image":"images/desk-fan.webp","rating":4.1,"description":"Office or study use."},
+  {"id":16,"name":"Solar String Lights 10m","category":"light","price":250,"features":"8 modes, waterproof","image":"images/string-light.jpg","rating":4.4,"description":"Decorative outdoor lighting."},
+  {"id":17,"name":"50W Portable Solar Panel Kit","category":"charger","price":1450,"features":"Foldable, for batteries/phones","image":"images/50W-portable.jpg","rating":4.7,"description":"Starter solar charging."},
+  {"id":18,"name":"Solar Rechargeable Emergency Light","category":"light","price":220,"features":"Bright, hanging hook","image":"images/emergency.webp","rating":4.5,"description":"Affordable outage essential."}
+]
